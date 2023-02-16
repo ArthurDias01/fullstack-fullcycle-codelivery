@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  app:
+    build: .
+    container_name: simulator_2
+    volumes:
+    - .:/go/src/
+    extra_hosts:
+    - "host.docker.internal:172.17.0.1"
+
+networks:
+  fullcycle2:
+    name: fullcycle2
+    driver: bridge
