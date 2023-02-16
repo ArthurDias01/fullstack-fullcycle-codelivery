@@ -10,6 +10,11 @@ Faça seu fork e também nos dê uma estrelinha para nos ajudar a divulgar o pro
 
 As instruções de instalações estão no README.md de cada projeto.
 
+## Modificações - Aula 3
+
+- [ ] Modificado de CRA para Vite com pnpm*
+- [ ] Atualização das bibliotecas MUI.
+
 ## Se tiver dificuldades de como conectar o Kafka nos microsserviços
 
 Nesta aula, o professor Luiz, explicou como conectar o Kafka nos microsserviços, então, criamos um vídeo explicando como fazer isso.
