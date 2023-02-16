@@ -1,17 +1,36 @@
-# Imersão Fullcycle 12 - Codelivery
-![Imersão Full Stack && Full Cycle](https://events-fullcycle.s3.amazonaws.com/events-fullcycle/static/site/img/grupo_4417.png)
+# Imersão Full Stack & FullCycle - Codelivery
 
-Participe gratuitamente: https://imersao.fullcycle.com.br/
+## Descrição
 
-## Sobre o repositório
-Esse repositório contém todo código utilizado durante as aulas para referência.
+Repositório do front-end feito com Golang (Backend)
 
-Faça seu fork e também nos dê uma estrelinha para nos ajudar a divulgar o projeto.
+**Importante**: A aplicação do Apache Kafka deve estar rodando primeiro.
 
-As instruções de instalações estão no README.md de cada projeto.
+## Configurar /etc/hosts
 
-## Se tiver dificuldades de como conectar o Kafka nos microsserviços
+A comunicação entre as aplicações se dá de forma direta através da rede da máquina.
+Para isto é necessário configurar um endereços que todos os containers Docker consigam acessar.
 
-Nesta aula, o professor Luiz, explicou como conectar o Kafka nos microsserviços, então, criamos um vídeo explicando como fazer isso.
+Acrescente no seu /etc/hosts (para Windows o caminho é C:\Windows\system32\drivers\etc\hosts):
+```
+127.0.0.1 host.docker.internal
+```
+Em todos os sistemas operacionais é necessário abrir o programa para editar o *hosts* como Administrator da máquina ou root.
 
-[https://www.youtube.com/watch?v=XsngzcsdnXQ](https://www.youtube.com/watch?v=XsngzcsdnXQ)
+## Rodar a aplicação
+
+Execute os comandos:
+
+```
+docker-compose up -d
+# Entrar no container
+docker-compose exec app bash
+# Rodar a aplicação Golang
+go run main.go
+```
+
+### Para Windows
+
+Lembrar de instalar o WSL2 e Docker. Vejo o vídeo: [https://www.youtube.com/watch?v=usF0rYCcj-E](https://www.youtube.com/watch?v=usF0rYCcj-E)
+
+Siga o guia rápido de instalação: [https://github.com/codeedu/wsl2-docker-quickstart](https://github.com/codeedu/wsl2-docker-quickstart)
